@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Happy Birthday - Special gift for you">
+  <meta name="theme-color" content="#ff7882">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="./images/hat.png">
+  <title>Dwi Birthday</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ========== LOADING SCREEN ========== -->
+<div id="loadingScreen">
+  <div class="loader">
+    <div class="heart-loader">❤️</div>
+    <p>Loading special gift...</p>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- ========== DARK MODE TOGGLE ========== -->
+<button id="darkModeToggle" class="dark-mode-btn">
+  <i class="fas fa-moon"></i>
+</button>
+
+<!-- ========== MUSIC PLAYER ========== -->
+<div id="musicPlayer" class="music-player">
+  <button id="playMusicBtn" class="play-music">
+    <i class="fas fa-music"></i>
+  </button>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="/Images/song.mpeg" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- ========== COUNTDOWN / COUNTUP ========== -->
+<div id="ageCounter" class="age-counter">
+  <i class="fas fa-birthday-cake"></i>
+  <span id="ageText">Loading...</span>
+</div>
+
+<div id="wrapper">
+  <div class="flag__birthday">
+    <img src="./images/1.png" alt="Birthday flag decoration" width="350" class="flag__left" onerror="this.src='https://placehold.co/350x100?text=🎉'">
+    <img src="./images/1.png" alt="Birthday flag decoration" width="350" class="flag__right" onerror="this.src='https://placehold.co/350x100?text=🎉'">
+  </div>
+
+  <div class="content">
+    <div class="left">
+      <div class="title">
+        <h1 class="happy">
+          <span style="--t: 4s;">H</span>
+          <span style="--t: 4.2s;">a</span>
+          <span style="--t: 4.4s;">p</span>
+          <span style="--t: 4.6s;">p</span>
+          <span style="--t: 4.8s;">y</span>
+        </h1>
+        <h1 class="birthday">
+          <span style="--t: 5s;">B</span>
+          <span style="--t: 5.2s;">i</span>
+          <span style="--t: 5.4s;">r</span>
+          <span style="--t: 5.6s;">t</span>
+          <span style="--t: 5.8s;">h</span>
+          <span style="--t: 6s;">d</span>
+          <span style="--t: 6.2s;">a</span>
+          <span style="--t: 6.4s;">y</span>
+        </h1>
+        <div class="hat">
+          <img src="./images/hat.png" alt="Birthday hat" width="130" onerror="this.src='https://placehold.co/130x100?text=🎩'">
+        </div>
+      </div>
+
+      <div class="date__of__birth">
+        <span></span>
+      </div>
+
+      <div class="btn">
+        <button id="btn__letter">
+          Open Letter 💌
+          <i class="fa-regular fa-envelope"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="box__account">
+        <div class="image">
+          <img src="./images/bubu.jpeg" alt="Birthday girl character" onerror="this.src='https://placehold.co/400x400?text=🎂'">
+        </div>
+        <div class="name">
+          <i class="fa-solid fa-heart"></i>
+          <span>Cutie</span>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="balloon_one">
+          <img width="100" src="./images/balloon1.png" alt="Birthday balloon" onerror="this.src='https://placehold.co/100x100?text=🎈'">
+        </div>
+        <div class="balloon_two">
+          <img width="100" src="./images/balloon2.png" alt="Birthday balloon" onerror="this.src='https://placehold.co/100x100?text=🎈'">
+        </div>
+      </div>
+
+      <div class="cricle">
+        <div class="text__cricle">
+          <span style="--i: 1;">h</span>
+          <span style="--i: 2;">a</span>
+          <span style="--i: 3;">p</span>
+          <span style="--i: 4;">p</span>
+          <span style="--i: 5;">y</span>
+          <span style="--i: 6;">-</span>
+          <span style="--i: 7;">b</span>
+          <span style="--i: 8;">i</span>
+          <span style="--i: 9;">r</span>
+          <span style="--i: 10;">t</span>
+          <span style="--i: 11;">h</span>
+          <span style="--i: 12;">d</span>
+          <span style="--i: 13;">a</span>
+          <span style="--i: 14;">y</span>
+          <span style="--i: 15;">-</span>
+        </div>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Hearts CSS -->
+  <div class="floating-hearts">
+    <div class="heart-fly">❤️</div>
+    <div class="heart-fly">💖</div>
+    <div class="heart-fly">💗</div>
+    <div class="heart-fly">💓</div>
+    <div class="heart-fly">💕</div>
+  </div>
+
+  <div class="decorate_star star1" style="--t: 15s;"></div>
+  <div class="decorate_star star2" style="--t: 15.2s;"></div>
+  <div class="decorate_star star3" style="--t: 15.4s;"></div>
+  <div class="decorate_star star4" style="--t: 15.6s;"></div>
+  <div class="decorate_star star5" style="--t: 15.8s;"></div>
+
+  <div class="decorate_flower--one" style="--t: 15s;">
+    <img width="20" src="./images/decorate_flower.png" alt="Flower decoration" onerror="this.style.display='none'">
+  </div>
+  <div class="decorate_flower--two" style="--t: 15.3s;">
+    <img width="20" src="./images/decorate_flower.png" alt="Flower decoration" onerror="this.style.display='none'">
+  </div>
+  <div class="decorate_flower--three" style="--t: 15.6s;">
+    <img width="20" src="./images/decorate_flower.png" alt="Flower decoration" onerror="this.style.display='none'">
+  </div>
+  <div class="smiley__icon">
+    <img src="./images/smiley_icon.png" alt="Smiley icon" width="100" onerror="this.style.display='none'">
+  </div>
+
+  <!-- ========== GALERI FOTO (DIPERBAIKI - PASTI JALAN) ========== -->
+  <div class="gallery-section">
+  <h3><i class="fas fa-images"></i> a photos</h3>
+  <div class="gallery-container">
+    <div style="display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory; padding: 20px;">
+      <div style="min-width: 80%; scroll-snap-align: center; text-align: center;">
+        <img src="/Images/2.jpeg" style="width: 100%; max-width: 300px; border-radius: 20px; border: 4px solid #ff7882;">
+        <p>Foto 1 ✨</p>
+      </div>
+      <div style="min-width: 80%; scroll-snap-align: center; text-align: center;">
+        <img src="/Images/3.jpeg" style="width: 100%; max-width: 300px; border-radius: 20px; border: 4px solid #ff7882;">
+        <p>Special Time 💕</p>
+      </div>
+      <div style="min-width: 80%; scroll-snap-align: center; text-align: center;">
+        <img src="/Images/4.jpeg" style="width: 100%; max-width: 300px; border-radius: 20px; border: 4px solid #ff7882;">
+        <p>Foto 3 🎉</p>
+      </div>
+    </div>
+  </div>
+</div>
+      <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="gallery-dots"></div>
+  </div>
+
+  <!-- Letter Box -->
+  <div class="box__letter" id="boxLetter">
+    <div class="letter__border" id="letterBorder">
+      <div class="letter">
+        <div class="title__letter" id="titleLetter"></div>
+        <div class="content__letter">
+          <div class="left">
+            <img id="heart__letter" src="https://media0.giphy.com/media/c76IJLufpNwSULPk77/giphy.gif" alt="Heart animation">
+            <img class="heart heart_1" style="--t: 0.2s" width="20" src="./images/heart.png" alt="Heart" onerror="this.src='https://placehold.co/20x20?text=❤️'">
+            <img class="heart heart_2" style="--t: 0.4s" width="20" src="./images/heart.png" alt="Heart" onerror="this.src='https://placehold.co/20x20?text=❤️'">
+            <img class="heart heart_3" style="--t: 0.6s" width="20" src="./images/heart.png" alt="Heart" onerror="this.src='https://placehold.co/20x20?text=❤️'">
+            <img class="heart heart_4" style="--t: 0.8s" width="20" src="./images/heart.png" alt="Heart" onerror="this.src='https://placehold.co/20x20?text=❤️'">
+          </div>
+          <div class="right">
+            <div class="love__img">
+              <img src="https://media4.giphy.com/media/W4jyjmIpnw6e38B6Qc/giphy.gif" alt="Love animation" width="220">
+            </div>
+            <div class="text__letter">
+              <p id="letterContent"></p>
+            </div>
+            <img id="mewmew" width="80" src="./images/mewmew.gif" alt="Cute cat" onerror="this.src='https://placehold.co/80x80?text=🐱'">
+          </div>
+        </div>
+      </div>
+      <div class="close" id="closeLetter">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+<script>
+  // ========== DATA ==========
+  const datetxt = "22 May 2006";
+  const datatxtletter = " Happy birthdayyyyy BB Thank you for being there and being one of the reasons my days feel more beautiful. May all good things always come into your life, and may I still be able to be a part of every happy story. May in this new age, all your prayers and hopes one by one come true. Stay as kind and warm as you are now, because your presence means so much."  
+  const titleLetter = "To you";
+  
+  const charArrDate = datetxt.split('');
+  const charArrDateLetter = datatxtletter.split('');
+  const charArrTitle = titleLetter.split('');
+  
+  let currentIndex = 0;
+  let currentIndexLetter = 0;
+  let currentIndexTitle = 0;
+  let timeDatetxt = null;
+  let intervalTitle = null;
+  let intervalContent = null;
+  let confettiFired = false;
+  
+  const dateSpan = document.querySelector(".date__of__birth span");
+  const textLetter = document.getElementById("letterContent");
+  const titleLetterDiv = document.getElementById("titleLetter");
+  const btnLetter = document.getElementById("btn__letter");
+  const boxLetter = document.getElementById("boxLetter");
+  const letterBorder = document.getElementById("letterBorder");
+  const closeBtn = document.getElementById("closeLetter");
+  
+  // ========== LOADING SCREEN ==========
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loadingScreen');
+      loadingScreen.classList.add('fade-out');
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }, 2000);
+  });
+  
+  // ========== DARK MODE ==========
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+      darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+      darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  });
+  
+  // ========== MUSIC PLAYER ==========
+  let isPlaying = false;
+  const bgMusic = document.getElementById('bgMusic');
+  const playMusicBtn = document.getElementById('playMusicBtn');
+  
+  playMusicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      playMusicBtn.innerHTML = '<i class="fas fa-music"></i>';
+      isPlaying = false;
+    } else {
+      bgMusic.play().catch(e => console.log('Audio play prevented:', e));
+      playMusicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      isPlaying = true;
+    }
+  });
+  
+  // ========== AGE COUNTER ==========
+  function calculateAge(birthDate) {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let years = today.getFullYear() - birth.getFullYear();
+    let months = today.getMonth() - birth.getMonth();
+    let days = today.getDate() - birth.getDate();
+    
+    if (days < 0) {
+      months--;
+      days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    }
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    return { years, months, days };
+  }
+  
+  const age = calculateAge('2006-5-22');
+  document.getElementById('ageText').innerHTML = `${age.years} years, ${age.months} months, ${age.days} days 🎂`;
+  
+  // ========== CONFETTI FUNCTION ==========
+  function launchConfetti() {
+    canvasConfetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, startVelocity: 15, colors: ['#ff3366', '#ff6699', '#ff33cc'] });
+    canvasConfetti({ particleCount: 100, spread: 100, origin: { y: 0.7, x: 0.3 }, startVelocity: 20 });
+    canvasConfetti({ particleCount: 100, spread: 100, origin: { y: 0.7, x: 0.7 }, startVelocity: 20 });
+  }
+  
+  // ========== TYPING EFFECT TANGGAL ==========
+  setTimeout(() => {
+    timeDatetxt = setInterval(() => {
+      if (currentIndex < charArrDate.length) {
+        dateSpan.textContent += charArrDate[currentIndex];
+        currentIndex++;
+      } else {
+        const i = document.createElement("i");
+        i.className = "fa-solid fa-star";
+        document.querySelector(".date__of__birth").prepend(i);
+        document.querySelector(".date__of__birth").appendChild(i.cloneNode(true));
+        clearInterval(timeDatetxt);
+      }
+    }, 100);
+  }, 8000);
+  
+  // ========== CLEANUP FUNCTION ==========
+  function cleanupIntervals() {
+    if (intervalTitle) clearInterval(intervalTitle);
+    if (intervalContent) clearInterval(intervalContent);
+  }
+  
+  function resetLetter() {
+    cleanupIntervals();
+    currentIndexLetter = 0;
+    currentIndexTitle = 0;
+    if (titleLetterDiv) titleLetterDiv.textContent = "";
+    if (textLetter) textLetter.textContent = "";
+    confettiFired = false;
+    
+    document.getElementById("heart__letter")?.classList.remove("animationOp");
+    document.querySelector(".love__img")?.classList.remove("animationOp");
+    document.getElementById("mewmew")?.classList.remove("animationOp");
+    document.querySelectorAll(".heart").forEach((item) => {
+      item.classList.remove("animation");
+    });
+  }
+  
+  // ========== BUKA SURAT DENGAN CONFETTI ==========
+  btnLetter.addEventListener("click", () => {
+    resetLetter();
+    
+    if (!confettiFired) {
+      launchConfetti();
+      confettiFired = true;
+    }
+    
+    boxLetter.style.display = "block";
+    
+    setTimeout(() => {
+      letterBorder.style.display = "block";
+    }, 200);
+    
+    setTimeout(() => {
+      intervalTitle = setInterval(() => {
+        if (currentIndexTitle < charArrTitle.length) {
+          titleLetterDiv.textContent += charArrTitle[currentIndexTitle];
+          const i = document.createElement("i");
+          i.className = "fa-solid fa-heart";
+          titleLetterDiv.appendChild(i);
+          currentIndexTitle++;
+        } else {
+          clearInterval(intervalTitle);
+          intervalTitle = null;
+        }
+      }, 100);
+    }, 500);
+    
+    setTimeout(() => {
+      document.getElementById("heart__letter")?.classList.add("animationOp");
+      document.querySelector(".love__img")?.classList.add("animationOp");
+      document.getElementById("mewmew")?.classList.add("animationOp");
+    }, 1300);
+    
+    setTimeout(() => {
+      document.querySelectorAll(".heart").forEach((item) => {
+        item.classList.add("animation");
+      });
+    }, 2000);
+    
+    setTimeout(() => {
+      intervalContent = setInterval(() => {
+        if (currentIndexLetter < charArrDateLetter.length) {
+          textLetter.textContent += charArrDateLetter[currentIndexLetter];
+          currentIndexLetter++;
+        } else {
+          clearInterval(intervalContent);
+          intervalContent = null;
+        }
+      }, 50);
+    }, 4000);
+  });
+  
+  // ========== TUTUP SURAT ==========
+  closeBtn.addEventListener("click", () => {
+    cleanupIntervals();
+    resetLetter();
+    letterBorder.style.display = "none";
+    boxLetter.style.display = "none";
+  });
+  
+  boxLetter.addEventListener("click", (e) => {
+    if (e.target === boxLetter) {
+      cleanupIntervals();
+      resetLetter();
+      letterBorder.style.display = "none";
+      boxLetter.style.display = "none";
+    }
+  });
+  
+  // ========== GALERI (HANYA INI YANG DIPERBAIKI) ==========
+  (function() {
+    const slider = document.querySelector('.gallery-slider');
+    const items = document.querySelectorAll('.gallery-item');
+    const prevBtn = document.querySelector('.gallery-prev');
+    const nextBtn = document.querySelector('.gallery-next');
+    const dotsContainer = document.querySelector('.gallery-dots');
+    
+    if (!slider || items.length === 0) return;
+    
+    let current = 0;
+    const total = items.length;
+    
+    // Buat dots
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', (function(idx) {
+          return function() { goTo(idx); };
+        })(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+    
+    function goTo(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+      slider.style.transform = 'translateX(-' + (current * 100) + '%)';
+      
+      document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+      });
+    }
+    
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+    
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+    if (nextBtn) nextBtn.addEventListener('click', next);
+    
+    goTo(0);
+  })();
+  
+  // ========== FLOATING HEARTS ==========
+  setInterval(() => {
+    const heartsContainer = document.querySelector('.floating-hearts');
+    if (heartsContainer) {
+      const heart = document.createElement('div');
+      heart.className = 'heart-fly dynamic';
+      heart.innerHTML = ['❤️', '💖', '💗', '💓', '💕'][Math.floor(Math.random() * 5)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDuration = 3 + Math.random() * 4 + 's';
+      heart.style.fontSize = 20 + Math.random() * 30 + 'px';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+  }, 800);
+  
+  // ========== CLEANUP ==========
+  window.addEventListener("beforeunload", () => {
+    if (timeDatetxt) clearInterval(timeDatetxt);
+    cleanupIntervals();
+  });
+  
+  // ========== FALLBACK untuk gambar yang gagal load ==========
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      if (!this.hasAttribute('data-fallback')) {
+        this.setAttribute('data-fallback', 'true');
+        this.src = 'https://placehold.co/' + (this.width || 100) + 'x' + (this.height || 100) + '?text=🎂';
+      }
+    });
+  });
+</script>
+
+<!-- ========== PERBAIKAN SURAT YANG HILANG ========== -->
+<script>
+(function fixLetterBox() {
+  setTimeout(() => {
+    const boxLetter = document.getElementById('boxLetter');
+    const letterBorder = document.getElementById('letterBorder');
+    const btnLetter = document.getElementById('btn__letter');
+    const closeBtn = document.getElementById('closeLetter');
+    
+    if (!boxLetter) return;
+    
+    if (boxLetter) {
+      boxLetter.style.display = 'none';
+      boxLetter.style.position = 'fixed';
+      boxLetter.style.top = '0';
+      boxLetter.style.left = '0';
+      boxLetter.style.width = '100%';
+      boxLetter.style.height = '100%';
+      boxLetter.style.backgroundColor = 'rgba(0,0,0,0.5)';
+      boxLetter.style.zIndex = '10000';
+    }
+    
+    if (letterBorder) letterBorder.style.display = 'none';
+    
+    if (btnLetter && !btnLetter.hasAttribute('data-fixed')) {
+      btnLetter.setAttribute('data-fixed', 'true');
+      btnLetter.addEventListener('click', function(e) {
+        if (boxLetter) boxLetter.style.display = 'block';
+        setTimeout(() => { if (letterBorder) letterBorder.style.display = 'block'; }, 200);
+        if (typeof canvasConfetti !== 'undefined') {
+          canvasConfetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+        }
+      });
+    }
+    
+    if (closeBtn && !closeBtn.hasAttribute('data-fixed')) {
+      closeBtn.setAttribute('data-fixed', 'true');
+      closeBtn.addEventListener('click', function() {
+        if (letterBorder) letterBorder.style.display = 'none';
+        if (boxLetter) boxLetter.style.display = 'none';
+      });
+    }
+    
+    if (boxLetter && !boxLetter.hasAttribute('data-fixed-bg')) {
+      boxLetter.setAttribute('data-fixed-bg', 'true');
+      boxLetter.addEventListener('click', function(e) {
+        if (e.target === boxLetter) {
+          if (letterBorder) letterBorder.style.display = 'none';
+          boxLetter.style.display = 'none';
+        }
+      });
+    }
+  }, 500);
+})();
+</script>
+
+<script>
+(function fixEmptyLetter() {
+  setTimeout(function() {
+    const letterText = "Happy birthday! Thank you for being there and being one of the reasons my days feel more beautiful. May all good things always come into your life, and may I still be able to be a part of every happy story. May in this new age, all your prayers and hopes one by one come true. Stay as kind and warm as you are now, because your presence means so much."
+    const titleText = "To you";
+    
+    let letterContent = document.getElementById("letterContent");
+    let titleLetter = document.getElementById("titleLetter");
+    let btnLetter = document.getElementById("btn__letter");
+    let boxLetter = document.getElementById("boxLetter");
+    let letterBorder = document.getElementById("letterBorder");
+    let closeBtn = document.getElementById("closeLetter");
+    
+    if (!letterContent) {
+      letterContent = document.querySelector(".text__letter p");
+      if (letterContent) letterContent.id = "letterContent";
+    }
+    if (!titleLetter) {
+      titleLetter = document.querySelector(".title__letter");
+      if (titleLetter) titleLetter.id = "titleLetter";
+    }
+    
+    if (!letterContent || !titleLetter) return;
+    
+    let currentIndexTitle = 0, currentIndexLetter = 0, intervalTitle = null, intervalContent = null, confettiFired = false;
+    
+    function cleanup() { if (intervalTitle) clearInterval(intervalTitle); if (intervalContent) clearInterval(intervalContent); }
+    function resetLetter() {
+      cleanup();
+      currentIndexTitle = 0;
+      currentIndexLetter = 0;
+      if (titleLetter) titleLetter.textContent = "";
+      if (letterContent) letterContent.textContent = "";
+      confettiFired = false;
+      const heartLetter = document.getElementById("heart__letter");
+      const loveImg = document.querySelector(".love__img");
+      const mewmew = document.getElementById("mewmew");
+      if (heartLetter) heartLetter.classList.remove("animationOp");
+      if (loveImg) loveImg.classList.remove("animationOp");
+      if (mewmew) mewmew.classList.remove("animationOp");
+      document.querySelectorAll(".heart").forEach(h => h.classList.remove("animation"));
+    }
+    
+    function launchConfetti() {
+      if (typeof canvasConfetti !== 'undefined') {
+        canvasConfetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#ff7882', '#ffb6c1', '#ff69b4'] });
+        canvasConfetti({ particleCount: 100, spread: 100, origin: { y: 0.7, x: 0.3 } });
+        canvasConfetti({ particleCount: 100, spread: 100, origin: { y: 0.7, x: 0.7 } });
+      }
+    }
+    
+    if (btnLetter) {
+      btnLetter.addEventListener("click", function() {
+        resetLetter();
+        if (!confettiFired) { launchConfetti(); confettiFired = true; }
+        if (boxLetter) boxLetter.style.display = "block";
+        setTimeout(function() { if (letterBorder) letterBorder.style.display = "block"; }, 200);
+        setTimeout(function() {
+          intervalTitle = setInterval(function() {
+            if (currentIndexTitle < titleText.length) {
+              titleLetter.textContent += titleText[currentIndexTitle];
+              if (currentIndexTitle === titleText.length - 1) {
+                const heartIcon = document.createElement("i");
+                heartIcon.className = "fas fa-heart";
+                titleLetter.appendChild(heartIcon);
+              }
+              currentIndexTitle++;
+            } else { clearInterval(intervalTitle); intervalTitle = null; }
+          }, 100);
+        }, 500);
+        setTimeout(function() {
+          const heartLetter = document.getElementById("heart__letter");
+          const loveImg = document.querySelector(".love__img");
+          const mewmew = document.getElementById("mewmew");
+          if (heartLetter) heartLetter.classList.add("animationOp");
+          if (loveImg) loveImg.classList.add("animationOp");
+          if (mewmew) mewmew.classList.add("animationOp");
+        }, 1300);
+        setTimeout(function() {
+          document.querySelectorAll(".heart").forEach(function(h) { h.classList.add("animation"); });
+        }, 2000);
+        setTimeout(function() {
+          intervalContent = setInterval(function() {
+            if (currentIndexLetter < letterText.length) {
+              letterContent.textContent += letterText[currentIndexLetter];
+              currentIndexLetter++;
+            } else { clearInterval(intervalContent); intervalContent = null; }
+          }, 50);
+        }, 4000);
+      });
+    }
+    
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function() {
+        cleanup();
+        resetLetter();
+        if (letterBorder) letterBorder.style.display = "none";
+        if (boxLetter) boxLetter.style.display = "none";
+      });
+    }
+    
+    if (boxLetter) {
+      boxLetter.addEventListener("click", function(e) {
+        if (e.target === boxLetter) {
+          cleanup();
+          resetLetter();
+          if (letterBorder) letterBorder.style.display = "none";
+          boxLetter.style.display = "none";
+        }
+      });
+    }
+  }, 500);
+})();
+</script>
+</body>
+</html>
